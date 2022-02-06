@@ -1,0 +1,257 @@
+@import "./button.css";
+@import "./icons.css";
+@import "./simulator.css";
+@import "./results.css";
+
+@import "./font/fontCircular.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One&display=swap");
+
+/* THEME */
+:root {
+  /* GRADIENT BACKGROUND */
+  --gradient: linear-gradient(180deg, rgba(195, 184, 50, 0.4) 0%, rgba(76, 119, 119, 0.6) 100%);
+  --gradient-h: linear-gradient(90deg, rgba(195, 184, 50, 0.4) 0%, rgba(76, 119, 119, 0.6) 100%);
+
+  /* THEME COLORS */
+  --mainColor: #4c7777;
+  --light-mainColor: rgba(76, 119, 119, 0.5);
+  --secondaryColor: #c3b832;
+  --light-secondaryColor: rgba(195, 184, 50, 0.5);
+  --grey: rgb(228, 228, 228);
+  --darkgrey: darkgrey;
+  --lightgrey: #e5eaec;
+
+  /* EFFECTS */
+  --seethrough: rgba(195, 184, 50, 0.2);
+  --shadow: 0 0 8px #aaaaaa;
+  --light-shadow: 0 0 8px #dddddd;
+
+  /* TEXT */
+  --mainText: #505050;
+  --mainFont: "Open Sans", sans-serif;
+  --accentFont: "Circular Std";
+  --funFont: "Fugaz One", cursive;
+
+  /* CHARTS */
+  --darkblue: #012340;
+  --darkpurple: #312559;
+  --purple: #8b4f8c;
+  --green: #77d9b5;
+  --lightgreen: #88f2b6;
+
+  /* TEMP DATA */
+  --tempgreen: rgb(56, 177, 126);
+  --tempyellowgreen: rgb(163, 207, 91);
+  --tempyellow: rgb(255, 230, 0);
+  --tempyelloworange: rgb(255, 153, 0);
+  --temporangered: rgb(255, 94, 0);
+  --tempred: crimson;
+  --tempredblack: rgb(119, 2, 2);
+}
+
+body {
+  color: var(--mainText);
+  font-size: 1rem;
+  justify-content: center;
+  font-family: var(--mainFont);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  min-height: 100vh;
+  background: var(--gradient) fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-width: 1024px;
+  max-width: 1400px;
+}
+
+p {
+  font-family: var(--mainFont);
+}
+
+#header {
+  width: 100%;
+}
+
+#content-main {
+  width: 100%;
+  min-height: 92vh;  
+}
+
+.main_container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 30px 60px;
+  margin: 30px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.container_title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  display: inline-block;
+  font-family: var(--accentFont);
+}
+
+.container_title::after {
+  content: "";
+  background-color: var(--light-secondaryColor);
+  height: 10px;
+  display: block;
+  margin-top: -12px;
+}
+
+.container_secondary_title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.bold-text {
+  font-weight: 800;
+}
+
+.light-text {
+  font-weight: 300;
+  font-family: var(--textPolice);
+}
+
+#mobile-message {
+  visibility: hidden;
+}
+
+/* FUN TEXT */
+
+/* .border {
+  border-bottom: 2px solid var(--green);
+  border-image-slice: 1;
+  width: fit-content;
+} */
+
+.flex-item {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.acenter {
+  align-items: center;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.jbetween {
+  justify-content: space-between;
+}
+
+/* RESTE */
+.hidden {
+  visibility: hidden;
+}
+
+.displaynone {
+  display: none;
+}
+
+.grid-item {
+  display: grid;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 0.2em;
+  line-height: 5rem;
+  font-family: var(--accentFont);
+}
+
+h2 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  line-height: 3rem;
+  font-family: var(--accentFont);
+}
+
+h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  line-height: 28px;
+  font-family: var(--accentFont);
+}
+
+.nopad {
+  padding: 0;
+}
+
+.nomarge {
+  margin: 0;
+}
+
+.margeup {
+  padding-top: 1rem !important;
+}
+
+#loader h4 {
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  /*     body {
+        transform: rotate(-90deg);
+        width: 100vh;
+        height: 100vw;
+    }
+
+    #root {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        align-self: center;
+    } */
+}
+
+/* cas mobile / largeurs trop petits : affichage d'un message */
+
+#mobile-message {
+  visibility: visible;
+  width: 100vh;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#mobile-message > div {
+  border: solid 5px white;
+  width: 60vw;
+  padding: 15px;
+  height: fit-content;
+  transform: rotate(90deg);
+}
+
+#mobile-message p {
+  font-size: 18px;
+  text-align: center;
+  font-family: var(--mainFont);
+  font-weight: 300;
+}
+
+@import "./responsive.css";

@@ -1,0 +1,50 @@
+#SimulatorNavigation {
+  width: 100%;
+  display: grid;
+  height: 100%;
+  gap: 5px;
+  font-family: var(--mainFont);
+  background-color: var(--mainColor);
+  color: white;
+  padding: 10px 20px;
+}
+
+#SimulatorNavigation .options {
+  border: none;
+  padding: 0;
+}
+
+#SimulatorNavigation .scope {
+  font-family: var(--mainFont);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+}
+
+#SimulatorNavigation .icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#SimulatorNavigation .icons p,
+#SimulatorNavigation .options-container p {
+  font-size: 14px;
+  text-align: center;
+}
+
+#SimulatorNavigation svg {
+  display: block;
+  margin: 0 auto;
+}
+
+#SimulatorNavigation .options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,49 @@
+nav {
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  padding: 0 20px;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  background-color: white;
+}
+
+nav h4 {
+  font-family: var(--funFont);
+  color: var(--mainText);
+  font-size: 22px;
+}
+
+nav h4 span {
+  color: var(--secondaryColor);
+}
+
+nav img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+nav > p {
+  font-weight: 600;
+  font-size: 18px;
+  font-style: italic;
+  padding: 5px 40px;
+  color: var(--mainText);
+  background-color: var(--secondaryColor);
+}
+
+nav > ul {
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+nav button, a {
+  margin-left: 15px;
+}
+
+.main-nav button svg {
+  color: var(--mainColor);
+  margin-right: 8px;
+}

@@ -1,0 +1,87 @@
+.modal-parent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 80%);
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: 6px;
+  padding: 50px 80px;
+  max-width: 950px;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
+.modal-content table {
+  margin-top: 0;
+}
+
+.modal-content .close-btn {
+  align-self: flex-end;
+  margin-top: 50px;
+}
+
+
+/* /// INTRO */
+#intro-modal h2 {
+  margin-bottom: 20px;
+}
+
+#intro-modal p, #intro-modal ol {
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+#intro-modal li {
+  margin-left: 50px;
+}
+
+#intro-modal ol li {
+  margin-bottom: 20px;
+}
+
+#intro-modal strong, #intro-modal b {
+  color: var(--mainColor);
+}
+
+#intro-modal a {
+  border-bottom: 2px solid var(--secondaryColor);
+}
+
+#intro-modal a:hover {
+  opacity: 0.6;
+}
+
+#intro-modal svg {
+  color: var(--secondaryColor);
+}
+
+
+/* FORM */
+form .MuiInput-underline::after {
+  border-bottom: 2px solid var(--secondaryColor);
+}
+
+form .MuiFormLabel-root.Mui-focused, form .MuiCheckbox-colorSecondary.Mui-checked {
+  color: var(--secondaryColor);
+}
+
+form .MuiCheckbox-colorSecondary.Mui-checked:hover, form .MuiIconButton-colorSecondary:hover {
+  background-color: var(--seethrough);
+}
+
+form .MuiFormGroup-root .group {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form .MuiFormHelperText-root {
+  align-self: flex-end;
+}
